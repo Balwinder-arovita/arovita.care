@@ -6,7 +6,8 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    {/* Add the basename to match your GitHub repository name */}
+    <BrowserRouter basename="/arovita.care">
       <App />
     </BrowserRouter>
   </StrictMode>,
