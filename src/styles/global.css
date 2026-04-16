@@ -1,0 +1,89 @@
+/* ============================================================
+   Arovita — Global Styles (base, cursor, labels, buttons, animations)
+   ============================================================ */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --g:#1A7A5A;--gm:#22A374;--gl:#2EC48A;--gp:#E6F7F0;--gxp:#F2FBF7;
+  --dark:#091810;--dark2:#0D2118;--ink:#162820;--ink2:#2E4D3A;--muted:#607A6A;--hint:#A8C8B8;
+  --cream:#FAF8F4;--white:#fff;--gold:#C09A52;--gold2:#E8B84B;
+  --border:rgba(26,122,90,0.11);--border2:rgba(26,122,90,0.22);
+  --sh:0 4px 28px rgba(9,24,16,0.08);--sh-lg:0 18px 56px rgba(9,24,16,0.13);
+  --r:12px;--rl:20px;--rx:26px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;cursor:none}
+a{text-decoration:none;color:inherit}
+a,button{cursor:none}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--gm),var(--gl));border-radius:4px}
+.container{max-width:1200px;margin:0 auto;padding:0 28px}
+
+/* ── Cursor ── */
+.cursor{position:fixed;width:10px;height:10px;background:var(--g);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .08s ease,width .25s,height .25s,background .25s}
+.cursor-ring{position:fixed;width:40px;height:40px;border:1.5px solid rgba(26,122,90,.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .18s ease,opacity .2s}
+body:has(a:hover) .cursor,.cursor.hovered{width:18px;height:18px;background:var(--gl)}
+body:has(a:hover) .cursor-ring,.cursor-ring.hovered{width:60px;height:60px;border-color:var(--gl);opacity:.5}
+@media(hover:none){body{cursor:auto}.cursor,.cursor-ring{display:none}a,button{cursor:pointer}}
+
+/* ── Labels & Titles ── */
+.sec-label{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;color:var(--g);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px}
+.sec-label::before,.sec-label::after{content:'';width:22px;height:1.5px;background:linear-gradient(90deg,var(--g),var(--gl));border-radius:2px}
+.sec-title{font-family:'Playfair Display',serif;font-size:42px;font-weight:700;line-height:1.15;color:var(--dark);letter-spacing:-0.5px}
+.sec-title em{font-style:italic;color:var(--g);position:relative}
+.sec-title em::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--g),var(--gl));border-radius:2px;animation:shimmer-line 3s ease-in-out infinite}
+@keyframes shimmer-line{0%,100%{opacity:.4;transform:scaleX(.7)}50%{opacity:1;transform:scaleX(1)}}
+
+/* ── Buttons ── */
+.btn-green{display:inline-flex;align-items:center;gap:9px;background:var(--g);color:#fff;padding:15px 32px;border-radius:50px;font-size:14.5px;font-weight:600;border:none;cursor:none;transition:all .25s;position:relative;overflow:hidden}
+.btn-green::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 30%,rgba(255,255,255,.12) 50%,transparent 70%);transform:translateX(-100%);transition:transform .5s}
+.btn-green:hover::before{transform:translateX(100%)}
+.btn-green:hover{background:var(--gm);transform:translateY(-2px);box-shadow:0 12px 32px rgba(26,122,90,.42)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--g);border:1.5px solid var(--g);padding:14px 30px;border-radius:50px;font-size:14.5px;font-weight:600;cursor:none;transition:all .25s}
+.btn-outline:hover{background:var(--gp);transform:translateY(-2px)}
+.btn-white{display:inline-flex;align-items:center;gap:9px;background:white;color:var(--g);padding:16px 36px;border-radius:50px;font-size:15px;font-weight:700;transition:all .25s;cursor:none;border:none}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.18)}
+
+/* ── Animations ── */
+.fu{opacity:0;transform:translateY(32px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.fu.vis{opacity:1;transform:none}
+.fu.d1{transition-delay:.08s}.fu.d2{transition-delay:.17s}.fu.d3{transition-delay:.26s}.fu.d4{transition-delay:.35s}.fu.d5{transition-delay:.44s}.fu.d6{transition-delay:.53s}
+.sl-left{opacity:0;transform:translateX(-40px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.sl-left.vis{opacity:1;transform:none}
+.sl-right{opacity:0;transform:translateX(40px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.sl-right.vis{opacity:1;transform:none}
+
+/* ── Scroll top button ── */
+.stb{position:fixed;bottom:28px;right:28px;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--g),var(--gl));display:flex;align-items:center;justify-content:center;cursor:none;opacity:0;transform:translateY(20px) scale(.8);transition:all .3s;z-index:999;box-shadow:0 6px 20px rgba(26,122,90,.4)}
+.stb.show{opacity:1;transform:none}
+.stb:hover{transform:translateY(-3px) scale(1.08);box-shadow:0 10px 28px rgba(26,122,90,.5)}
+
+/* ============================================================
+   RESPONSIVE — shared elements
+   ============================================================ */
+@media(max-width:900px){
+  .container{padding:0 22px}
+  .sec-title{font-size:34px}
+  .sec-label{font-size:10.5px;letter-spacing:1.2px;gap:6px}
+  .sec-label::before,.sec-label::after{width:16px}
+  .btn-green{padding:13px 26px;font-size:13.5px;gap:8px}
+  .btn-outline{padding:12px 24px;font-size:13.5px}
+  .stb{bottom:20px;right:20px}
+}
+@media(max-width:600px){
+  .container{padding:0 24px}
+  .sec-title{font-size:28px;letter-spacing:-.3px}
+  .sec-label{font-size:10px;margin-bottom:10px}
+  .btn-green{padding:13px 24px;font-size:13.5px}
+  .stb{bottom:18px;right:18px;width:42px;height:42px}
+}
+@media(max-width:380px){
+  .container{padding:0 12px}
+  .sec-title{font-size:25px}
+}
+
+/* Hide custom cursor on touch devices */
+@media(hover:none){
+  .cursor,.cursor-ring{display:none}
+  body,a,button{cursor:auto}
+}

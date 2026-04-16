@@ -1,0 +1,127 @@
+/* ===================== HOME NURSE PAGE ===================== */
+
+/* ===================== Hero ===================== */
+.hn-hero{min-height:400px;position:relative;overflow:hidden;display:flex;align-items:center;padding-top:76px;background:var(--cream)}
+.hn-hero-mesh{position:absolute;inset:0;z-index:0}
+.hn-hero-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(26,122,90,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,122,90,.04) 1px,transparent 1px);background-size:60px 60px}
+.hn-hero-inner{position:relative;z-index:2;text-align:center;padding:80px 0 60px}
+.hn-hero-h{font-family:'Playfair Display',serif;font-size:48px;font-weight:800;color:var(--dark);line-height:1.1;margin-bottom:18px;letter-spacing:-1px}
+.hn-hero-h em{font-style:italic;color:var(--g)}
+.hn-hero-p{font-size:17px;color:var(--muted);max-width:620px;margin:0 auto 32px;line-height:1.7}
+.hn-hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ===================== Service Categories ===================== */
+.nurse-cats{padding:80px 0 100px;background:linear-gradient(180deg,#fff 0%,#FAFDF9 40%,var(--gxp) 100%);position:relative}
+.nurse-cats::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(242,251,247,.4) 100%)}
+.nurse-cats-header{text-align:center;margin-bottom:56px;position:relative;z-index:1}
+.nc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:1}
+.nc-card{background:white;border-radius:24px;overflow:hidden;border:1px solid var(--border);transition:all .35s;cursor:none;position:relative;box-shadow:var(--sh)}
+.nc-card:hover{transform:translateY(-10px);box-shadow:0 24px 60px rgba(9,24,16,.14);border-color:var(--border2)}
+.nc-card-top{height:130px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.nc-card-top svg{width:56px;height:56px;position:relative;z-index:1;filter:drop-shadow(0 4px 12px rgba(0,0,0,.1))}
+.nc-card-body{padding:24px 22px 26px}
+.nc-card-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--dark);margin-bottom:9px;line-height:1.3}
+.nc-card-desc{font-size:13.5px;color:var(--muted);line-height:1.65;margin-bottom:14px}
+.nc-card-price{font-size:14px;font-weight:700;color:var(--g);margin-bottom:16px}
+.nc-card-price.nc-card-price-placeholder{visibility:hidden;pointer-events:none;min-height:21px}
+.nc-card-btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;padding:10px 20px;border-radius:50px;transition:all .25s;border:none;cursor:none;font-family:'Outfit',sans-serif;background:var(--g);color:white;text-decoration:none}
+.nc-card-btn:hover{background:var(--gm);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,122,90,.35)}
+.nc-card-btn .arr{transition:transform .22s}
+.nc-card:hover .nc-card-btn .arr{transform:translateX(4px)}
+
+/* ===================== How It Works ===================== */
+.hn-how-sec{padding:100px 0;background:var(--gxp);position:relative}
+.hn-how-sec::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--border2) 40%,var(--border2) 60%,transparent)}
+.hn-how-header{text-align:center;margin-bottom:64px}
+.hn-how-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;max-width:1000px;margin:0 auto;position:relative}
+.hn-how-steps::before{content:'';position:absolute;top:36px;left:calc(12.5% + 20px);right:calc(12.5% + 20px);height:2px;background:var(--border);z-index:0}
+.hn-how-step{text-align:center;position:relative;z-index:1}
+.hn-step-num{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--g),var(--gl));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Playfair Display',serif;font-size:26px;font-weight:800;color:white;position:relative;box-shadow:0 8px 28px rgba(26,122,90,.3)}
+.hn-step-num::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px dashed rgba(26,122,90,.2);animation:hn-spin 12s linear infinite}
+@keyframes hn-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.hn-step-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--dark);margin-bottom:6px}
+.hn-step-desc{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* 3-step variant */
+.hn-how-steps.steps-3{grid-template-columns:repeat(3,1fr)}
+.hn-how-steps.steps-3::before{left:calc(16.67% + 20px);right:calc(16.67% + 20px)}
+
+/* ===================== Why Our Nurses (Trust) ===================== */
+.trust-sec{padding:100px 0;background:linear-gradient(180deg,var(--gxp) 0%,#fff 30%,#fff 70%,var(--cream) 100%)}
+.trust-header{text-align:center;margin-bottom:56px}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1000px;margin:0 auto}
+.trust-card{text-align:center;padding:28px 20px;border-radius:22px;border:1px solid var(--border);transition:all .3s;background:white}
+.trust-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--border2)}
+.trust-ic{width:60px;height:60px;border-radius:50%;background:var(--gp);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;transition:all .3s}
+.trust-card:hover .trust-ic{background:rgba(46,196,138,.18);transform:scale(1.08)}
+.trust-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--dark);margin-bottom:6px}
+.trust-desc{font-size:12.5px;color:var(--muted);line-height:1.6}
+
+/* ===================== Patient Stories ===================== */
+.stories-sec{padding:100px 0;background:linear-gradient(180deg,#fff 0%,#FAFDF9 50%,var(--gxp) 100%)}
+.stories-header{text-align:center;margin-bottom:56px}
+.stories-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:900px;margin:0 auto}
+.story-card{background:white;border-radius:24px;padding:30px;border:1px solid var(--border);box-shadow:var(--sh);transition:all .3s;position:relative;overflow:hidden}
+.story-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--border2)}
+.story-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--g),var(--gl));transform:scaleY(0);transform-origin:top;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.story-card:hover::before{transform:scaleY(1)}
+.story-q{font-size:44px;color:var(--gl);line-height:.7;font-family:'Playfair Display',serif;display:block;margin-bottom:12px;opacity:.5}
+.story-text{font-size:14.5px;color:var(--ink2);line-height:1.75;margin-bottom:16px;font-style:italic}
+.story-stars{color:var(--gold2);font-size:13px;letter-spacing:1.5px;margin-bottom:14px}
+.story-auth{display:flex;align-items:center;gap:12px}
+.story-av{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gp),#A8D8BC);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:var(--g);flex-shrink:0;border:2px solid var(--border2)}
+.story-name{font-weight:700;font-size:14.5px;color:var(--dark)}
+.story-role{font-size:12px;color:var(--muted);margin-top:2px}
+
+/* ===================== FAQ ===================== */
+.hn-faq-sec{padding:100px 0;background:var(--gxp)}
+.hn-faq-header{text-align:center;margin-bottom:56px}
+.hn-faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.hn-faq-item{background:white;border-radius:18px;border:1px solid var(--border);overflow:hidden;transition:all .3s}
+.hn-faq-item:hover{border-color:var(--border2)}
+.hn-faq-item.open{box-shadow:var(--sh)}
+.hn-faq-q{padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;font-size:15px;font-weight:600;color:var(--dark);transition:color .2s}
+.hn-faq-item.open .hn-faq-q{color:var(--g)}
+.hn-faq-chevron{width:20px;height:20px;transition:transform .3s;flex-shrink:0}
+.hn-faq-item.open .hn-faq-chevron{transform:rotate(180deg)}
+.hn-faq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1),padding .3s}
+.hn-faq-item.open .hn-faq-a{max-height:200px;padding:0 24px 20px}
+.hn-faq-a-text{font-size:14px;color:var(--muted);line-height:1.7}
+
+/* ===================== Responsive ===================== */
+@media(max-width:900px){
+  /* Hero */
+  .hn-hero-h{font-size:38px}
+  /* Service Categories */
+  .nc-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  /* How It Works */
+  .hn-how-steps{grid-template-columns:repeat(2,1fr);gap:24px}
+  .hn-how-steps::before{display:none}
+  /* Trust */
+  .trust-grid{grid-template-columns:repeat(2,1fr);gap:18px}
+  /* Stories */
+  .stories-grid{grid-template-columns:1fr;gap:20px}
+}
+@media(max-width:600px){
+  /* Hero */
+  .hn-hero-inner{padding:56px 0 44px}
+  .hn-hero-h{font-size:30px;letter-spacing:-.5px}
+  .hn-hero-p{font-size:14px;margin-bottom:24px}
+  /* Service Categories */
+  .nurse-cats{padding:52px 0 70px}
+  .nc-grid{grid-template-columns:1fr;gap:16px}
+  .nc-card{border-radius:20px}
+  .nc-card-top{height:110px}
+  /* How It Works */
+  .hn-how-sec{padding:60px 0}
+  .hn-how-steps{grid-template-columns:1fr;gap:28px}
+  /* Trust */
+  .trust-sec{padding:60px 0}
+  .trust-grid{grid-template-columns:1fr;gap:14px}
+  /* Stories */
+  .stories-sec{padding:60px 0}
+  .story-card{padding:22px 18px;border-radius:18px}
+  /* FAQ */
+  .hn-faq-sec{padding:60px 0}
+  .hn-faq-item{border-radius:14px}
+}

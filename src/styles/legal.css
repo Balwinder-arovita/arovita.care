@@ -1,0 +1,69 @@
+/* ===================== LEGAL PAGES (Privacy, Terms, Refund) ===================== */
+
+/* ===================== Hero ===================== */
+.legal-hero{padding:120px 0 48px;background:var(--cream);position:relative;overflow:hidden;text-align:center}
+.legal-hero-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(26,122,90,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(26,122,90,.03) 1px,transparent 1px);background-size:60px 60px}
+.legal-hero-inner{position:relative;z-index:2}
+.legal-hero-h{font-family:'Playfair Display',serif;font-size:42px;font-weight:800;color:var(--dark);line-height:1.15;margin-bottom:14px;letter-spacing:-.5px}
+.legal-hero-h em{font-style:italic;color:var(--g)}
+.legal-hero-date{font-size:13.5px;color:var(--muted);font-weight:500}
+.legal-hero-date strong{color:var(--g);font-weight:700}
+
+/* ===================== Content ===================== */
+.legal-content{padding:64px 0 100px;background:linear-gradient(180deg,#fff 0%,var(--gxp) 100%)}
+.legal-card{max-width:780px;margin:0 auto;background:white;border-radius:var(--rx);border:1px solid var(--border);box-shadow:var(--sh);padding:48px 52px;position:relative;overflow:hidden}
+.legal-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--g),var(--gl))}
+
+/* ===================== Typography ===================== */
+.legal-card h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--dark);margin:36px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--border);position:relative}
+.legal-card h2:first-child{margin-top:0}
+.legal-card h2::after{content:'';position:absolute;bottom:-1px;left:0;width:60px;height:2px;background:var(--g);border-radius:2px}
+.legal-card h3{font-family:'Outfit',sans-serif;font-size:16px;font-weight:700;color:var(--dark);margin:20px 0 8px}
+.legal-card p{font-size:14.5px;color:var(--muted);line-height:1.78;margin-bottom:14px}
+.legal-card strong{color:var(--ink2);font-weight:600}
+.legal-card em{font-style:italic;color:var(--g);font-weight:600}
+.legal-card ul,.legal-card ol{margin:12px 0 16px;padding-left:24px}
+.legal-card li{font-size:14px;color:var(--muted);line-height:1.78;margin-bottom:8px;position:relative}
+.legal-card ul li::marker{color:var(--g)}
+.legal-card ol li::marker{color:var(--g);font-weight:700}
+.legal-card a{color:var(--g);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(26,122,90,.2);transition:all .2s}
+.legal-card a:hover{border-color:var(--g)}
+.legal-red{color:#e53935}
+
+/* ===================== Table ===================== */
+.legal-table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14px}
+.legal-table th,.legal-table td{padding:11px 14px;border:1px solid var(--border);text-align:left;vertical-align:top;line-height:1.65;color:var(--muted)}
+.legal-table thead th{background:var(--gxp);font-family:'Outfit',sans-serif;font-weight:700;color:var(--dark);font-size:13.5px}
+.legal-table tbody tr:nth-child(even){background:#fafafa}
+.legal-table td:first-child{font-weight:600;color:var(--ink2);white-space:nowrap;width:30%}
+@media(max-width:600px){
+  .legal-table{font-size:13px}
+  .legal-table th,.legal-table td{padding:9px 10px}
+  .legal-table td:first-child{white-space:normal;width:auto}
+}
+
+/* ===================== Contact Box ===================== */
+.legal-contact{margin-top:32px;padding:24px 28px;background:var(--gxp);border-radius:18px;border:1px solid rgba(26,122,90,.1)}
+.legal-contact p{margin-bottom:6px}
+.legal-contact p:last-child{margin-bottom:0}
+
+/* ===================== Important Badge ===================== */
+.legal-important{background:linear-gradient(135deg,rgba(232,184,75,.06),rgba(192,154,82,.04));border:1px solid rgba(192,154,82,.2);border-radius:14px;padding:18px 22px;margin:16px 0}
+.legal-important p{color:var(--ink2);font-weight:500;margin-bottom:0}
+.legal-important strong{color:var(--gold-dark,#8B6914)}
+
+/* ===================== Responsive ===================== */
+@media(max-width:900px){
+  .legal-hero{padding:100px 0 36px}
+  .legal-hero-h{font-size:34px}
+  .legal-card{padding:36px 32px}
+}
+@media(max-width:600px){
+  .legal-hero{padding:88px 0 28px}
+  .legal-hero-h{font-size:28px;letter-spacing:-.3px}
+  .legal-card{padding:28px 20px;border-radius:20px}
+  .legal-card h2{font-size:19px;margin:28px 0 12px}
+  .legal-card p{font-size:13.5px}
+  .legal-card li{font-size:13px}
+  .legal-contact{padding:18px 16px}
+}

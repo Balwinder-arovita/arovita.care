@@ -1,0 +1,151 @@
+/* ===================== DOCTOR PAGE ===================== */
+
+/* Breadcrumb */
+.breadcrumb{padding-top:88px;padding-bottom:20px}
+.bread-list{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.bread-list a{color:var(--g);font-weight:500;transition:color .18s}
+.bread-list a:hover{color:var(--gm)}
+.bread-sep{color:var(--hint)}
+
+/* Doctor Hero */
+.doc-hero{padding-bottom:40px}
+.doc-hero-card{background:linear-gradient(180deg,#fff 0%,var(--gxp) 100%);border-radius:var(--rx);box-shadow:var(--sh);border:1px solid var(--border);padding:36px;display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center}
+.doc-avatar-lg{width:130px;height:130px;border-radius:50%;background:linear-gradient(135deg,var(--g),var(--gl));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:42px;font-weight:800;color:white;position:relative;flex-shrink:0}
+.doc-verified-badge{position:absolute;bottom:4px;right:4px;width:30px;height:30px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.doc-info h1{font-family:'Playfair Display',serif;font-size:28px;font-weight:800;color:var(--dark);margin-bottom:4px}
+.doc-info .doc-degree{font-size:14px;color:var(--muted);font-weight:500;margin-bottom:2px}
+.doc-info .doc-specialty{font-size:15px;font-weight:600;color:var(--g);margin-bottom:10px}
+.doc-meta{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-bottom:12px}
+.doc-meta-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink2);font-weight:500}
+.doc-meta-item svg{color:var(--g);flex-shrink:0}
+.doc-hero-rating{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.doc-hero-rating .stars{color:var(--gold2);font-size:14px;letter-spacing:1px}
+.doc-hero-rating .score{font-family:'Playfair Display',serif;font-size:20px;font-weight:800;color:var(--dark)}
+.doc-hero-rating .count{font-size:12.5px;color:var(--muted)}
+.doc-verified-tag{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:var(--g);background:var(--gp);padding:5px 12px;border-radius:20px;margin-left:8px}
+.doc-stats-row{display:flex;gap:20px;flex-wrap:wrap}
+.doc-stat{text-align:center;padding:0 16px;border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center}
+.doc-stat:last-child{border-right:none;padding-right:0}
+.doc-stat:first-child{padding-left:0}
+.doc-stat-num{font-family:'Playfair Display',serif;font-size:20px;font-weight:800;color:var(--g)}
+.doc-stat-lbl{font-size:11px;color:var(--muted);margin-top:2px;white-space:nowrap}
+.doc-book-col{display:flex;flex-direction:column;align-items:flex-end;gap:12px;flex-shrink:0}
+.doc-fee{text-align:right}
+.doc-fee .label{font-size:11px;color:var(--muted);margin-bottom:2px}
+.doc-fee .amount{font-family:'Playfair Display',serif;font-size:32px;font-weight:800;color:var(--dark)}
+
+/* Tabs */
+.tab-nav{display:flex;gap:4px;background:var(--gxp);border-radius:50px;padding:5px;margin-bottom:32px;width:fit-content}
+.tab-btn{padding:11px 28px;border-radius:50px;font-size:14px;font-weight:600;color:var(--muted);cursor:none;transition:all .25s;border:none;background:none;font-family:'Outfit',sans-serif}
+.tab-btn.active{background:var(--g);color:white;box-shadow:0 4px 16px rgba(26,122,90,.3)}
+.tab-btn:hover:not(.active){color:var(--g);background:rgba(26,122,90,.06)}
+
+/* About Tab */
+.doc-bio{font-size:15px;color:var(--ink2);line-height:1.8;margin-bottom:32px}
+.doc-section-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--dark);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.doc-section-title svg{color:var(--g)}
+.edu-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+.edu-item{display:flex;align-items:flex-start;gap:14px;padding:16px;background:var(--gxp);border-radius:var(--r);border:1px solid var(--border);transition:all .25s}
+.edu-item:hover{box-shadow:var(--sh);border-color:var(--border2);transform:translateX(4px)}
+.edu-icon{width:44px;height:44px;background:var(--gp);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.edu-degree{font-weight:700;font-size:14.5px;color:var(--dark)}
+.edu-school{font-size:13px;color:var(--muted);margin-top:2px}
+.spec-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.spec-chip{padding:8px 18px;border-radius:50px;font-size:13px;font-weight:600;color:var(--g);background:var(--gp);border:1px solid rgba(26,122,90,.15);transition:all .22s}
+.spec-chip:hover{background:var(--g);color:white;transform:translateY(-2px);box-shadow:0 6px 20px rgba(26,122,90,.25)}
+.hosp-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
+.hosp-item{display:flex;align-items:center;gap:12px;padding:14px 18px;background:linear-gradient(180deg,#fff 0%,var(--gxp) 100%);border-radius:var(--r);border:1px solid var(--border);transition:all .25s}
+.hosp-item:hover{box-shadow:var(--sh);border-color:var(--border2)}
+.hosp-ic{width:40px;height:40px;background:linear-gradient(135deg,var(--gp),#d4f0e2);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hosp-name{font-weight:600;font-size:14px;color:var(--dark)}
+.hosp-loc{font-size:12px;color:var(--muted);margin-top:2px}
+
+/* Schedule Tab */
+.date-strip{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px;margin-bottom:28px;scrollbar-width:none}
+.date-strip::-webkit-scrollbar{display:none}
+.date-card{min-width:76px;padding:14px 10px;border-radius:var(--r);text-align:center;border:1.5px solid var(--border);background:white;cursor:none;transition:all .22s;flex-shrink:0}
+.date-card:hover{border-color:var(--border2);box-shadow:var(--sh)}
+.date-card.active{background:var(--g);border-color:var(--g);color:white}
+.date-card.active .date-day,.date-card.active .date-num,.date-card.active .date-mon{color:white}
+.date-day{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.date-num{font-family:'Playfair Display',serif;font-size:22px;font-weight:800;color:var(--dark);line-height:1.4}
+.date-mon{font-size:11px;color:var(--muted);font-weight:500}
+.slot-group{margin-bottom:24px}
+.slot-group-title{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.slot-group-title svg{color:var(--g)}
+.slot-grid{display:flex;flex-wrap:wrap;gap:10px}
+.slot-pill{padding:10px 20px;border-radius:50px;font-size:13.5px;font-weight:600;border:1.5px solid var(--border2);color:var(--g);background:white;cursor:none;transition:all .22s}
+.slot-pill:hover:not(.booked){background:var(--gp);border-color:var(--g);transform:translateY(-2px);box-shadow:0 4px 14px rgba(26,122,90,.15)}
+.slot-pill.selected{background:var(--g);color:white;border-color:var(--g);box-shadow:0 6px 20px rgba(26,122,90,.3)}
+.slot-pill.booked{color:var(--hint);border-color:var(--border);background:var(--gxp);cursor:not-allowed;opacity:.5;pointer-events:none}
+
+/* Reviews */
+.reviews-layout{display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start}
+.review-summary{background:linear-gradient(180deg,#fff 0%,var(--gxp) 100%);border-radius:var(--rl);padding:28px;border:1px solid var(--border);box-shadow:var(--sh);position:sticky;top:100px}
+.review-big{text-align:center;margin-bottom:20px}
+.review-big-num{font-family:'Playfair Display',serif;font-size:56px;font-weight:800;color:var(--dark);line-height:1}
+.review-big-stars{color:var(--gold2);font-size:16px;letter-spacing:2px;margin-top:6px;display:block}
+.review-big-count{font-size:12.5px;color:var(--muted);margin-top:4px}
+.rbar{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-bottom:8px}
+.rbar-stars{width:22px;text-align:right;font-weight:700;flex-shrink:0}
+.rbar-track{flex:1;height:6px;background:rgba(0,0,0,.06);border-radius:3px;overflow:hidden}
+.rbar-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:3px;transition:width .8s cubic-bezier(.16,1,.3,1)}
+.review-card{background:linear-gradient(180deg,var(--gxp) 0%,#fff 30%,#fff 70%,var(--cream) 100%);border-radius:var(--rl);padding:24px;border:1px solid var(--border);box-shadow:var(--sh);margin-bottom:16px;transition:all .25s;position:relative;overflow:hidden}
+.review-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--g),var(--gl));border-radius:3px 0 0 3px;transform:scaleY(0);transform-origin:top;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.review-card:hover{box-shadow:var(--sh-lg);border-color:var(--border2)}
+.review-card:hover::before{transform:scaleY(1)}
+.rev-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.rev-av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gp),#A8D8BC);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:var(--g);flex-shrink:0}
+.rev-name{font-weight:700;font-size:14px;color:var(--dark)}
+.rev-date{font-size:11.5px;color:var(--muted);margin-top:1px}
+.rev-verified{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;color:var(--g);background:var(--gp);padding:3px 8px;border-radius:20px;margin-left:auto;flex-shrink:0}
+.rev-stars{color:var(--gold2);font-size:13px;letter-spacing:1.5px;margin-bottom:10px}
+
+/* Similar Doctors */
+.similar{padding:60px 0 80px}
+.similar-scroll{display:flex;gap:20px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none}
+.similar-scroll::-webkit-scrollbar{display:none}
+.sim-card{min-width:280px;flex:1;background:linear-gradient(180deg,#fff 0%,var(--gxp) 100%);border-radius:var(--rl);padding:24px;border:1px solid var(--border);box-shadow:var(--sh);transition:all .3s;cursor:none}
+.sim-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--border2)}
+.sim-top{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.sim-av{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gp),#A8D8BC);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:18px;font-weight:800;color:var(--g);flex-shrink:0}
+.sim-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--dark)}
+.sim-spec{font-size:12.5px;color:var(--muted);margin-top:2px}
+.sim-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.sim-rating{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:var(--dark)}
+.sim-rating .stars{color:var(--gold2);font-size:12px}
+.sim-fee{font-family:'Playfair Display',serif;font-size:18px;font-weight:800;color:var(--g)}
+.sim-book{width:100%;padding:12px;border-radius:50px;background:var(--gp);color:var(--g);border:1.5px solid rgba(26,122,90,.18);font-size:13.5px;font-weight:700;cursor:none;transition:all .22s;font-family:'Outfit',sans-serif}
+.sim-book:hover{background:var(--g);color:white;box-shadow:0 8px 24px rgba(26,122,90,.3)}
+
+/* Responsive */
+@media(max-width:900px){
+  .doc-hero-card{grid-template-columns:1fr;text-align:center;gap:20px;padding:28px}
+  .doc-avatar-lg{margin:0 auto;width:110px;height:110px}
+  .doc-meta{justify-content:center}
+  .doc-hero-rating{justify-content:center}
+  .doc-stats-row{justify-content:center}
+  .doc-book-col{align-items:center}
+  .doc-fee{text-align:center}
+  .tab-nav{width:100%;overflow-x:auto;scrollbar-width:none;padding:4px}
+  .tab-nav::-webkit-scrollbar{display:none}
+  .reviews-layout{grid-template-columns:1fr}
+  .review-summary{position:static}
+  .slot-grid{gap:8px}
+  .slot-pill{padding:9px 16px;font-size:12.5px}
+  .similar-scroll{gap:16px}
+  .sim-card{min-width:260px}
+}
+@media(max-width:600px){
+  .breadcrumb{padding-top:76px;padding-bottom:14px}
+  .bread-list{font-size:12px}
+  .doc-hero-card{padding:22px 18px}
+  .doc-avatar-lg{width:90px;height:90px;font-size:32px}
+  .doc-info h1{font-size:22px}
+  .doc-fee .amount{font-size:24px}
+  .tab-btn{padding:9px 20px;font-size:12.5px}
+  .date-card{min-width:64px;padding:10px 8px}
+  .date-num{font-size:18px}
+  .review-big-num{font-size:44px}
+  .sim-card{min-width:240px}
+}
