@@ -163,7 +163,8 @@
   .cta-h{font-size:32px}
 }
 @media(max-width:600px){
-  .svc-hero-inner{padding:52px 0 40px}
+  .svc-hero{padding-top:70px}
+  .svc-hero-inner{padding:36px 0 32px}
   .svc-hero-h{font-size:30px;letter-spacing:-.5px}
   .svc-hero-p{font-size:14px;margin-bottom:22px}
   .ecg-deco{width:160px;height:32px}

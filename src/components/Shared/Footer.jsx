@@ -55,7 +55,7 @@ export default function Footer() {
             </ul>
             <div className="footer-h" style={{marginTop:'24px'}}>Location</div>
             <ul className="footer-links">
-              <li><span style={{fontSize:'12.5px',lineHeight:1.8,color:'rgba(255,255,255,.72)',display:'block',textAlign:'justify'}}>Arovita Healthcare Private Limited, Second Floor, No.07/3, 15/1, 185/2, 185/A, Business Synergy Center, Nagananda Commercial Complex, 18th Main Road, Jayanagar, Bengaluru, Karnataka — 560041</span></li>
+              <li><span style={{fontSize:'12px',lineHeight:1.75,color:'rgba(255,255,255,.65)',display:'block',paddingLeft:'16px'}}>Arovita Healthcare Private Limited<br/>2nd Floor, No.07/3, 15/1, 185/2, 185/A<br/>Business Synergy Center<br/>Nagananda Complex, 18th Main Rd<br/>Jayanagar, Bengaluru — 560041</span></li>
             </ul>
           </div>
         </div>

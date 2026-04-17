@@ -189,50 +189,59 @@
 .mission-desc{font-size:15px;color:rgba(255,255,255,.48);line-height:1.76;margin-bottom:28px}
 
 /* ===================== FEATURES ===================== */
-.features{padding:110px 0;background:linear-gradient(180deg,var(--gxp) 0%,#fff 30%,#fff 70%,var(--cream) 100%);position:relative}
+.features{padding:110px 0;background:var(--cream);position:relative;overflow:hidden}
+.features::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 90% 20%,rgba(46,196,138,.06),transparent),radial-gradient(ellipse 50% 40% at 10% 80%,rgba(26,122,90,.05),transparent);pointer-events:none}
 
 /* ── Journey / How It Works ── */
 .journey-header{text-align:center;margin-bottom:52px}
 .journey-sub{font-size:15px;color:var(--muted);max-width:560px;margin:14px auto 0;line-height:1.7}
 
 /* Simple step layout */
-.jss-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.jss-layout{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start;position:relative;z-index:1}
+.journey-header{position:relative;z-index:1}
+.features .journey-sub{color:var(--muted)}
 
-/* Left — step list */
-.jss-list{display:flex;flex-direction:column;position:relative}
-.jss-item{display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:14px;border:1.5px solid transparent;background:none;text-align:left;cursor:pointer;transition:all .25s;position:relative}
-.jss-item:hover{background:var(--gxp)}
-.jss-active{border-color:var(--border)!important}
-.jss-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;transition:all .3s}
-.jss-item-title{font-size:13.5px;font-weight:600;color:var(--ink2);transition:color .25s;white-space:nowrap}
-.jss-connector{position:absolute;left:29px;top:100%;width:2px;height:12px;border-radius:2px;transition:background .4s}
+/* Left — vertical timeline */
+.jss-list{display:flex;flex-direction:column}
+.jss-item{display:flex;align-items:flex-start;gap:0;background:none;border:none;text-align:left;cursor:pointer;padding:0}
+.jss-timeline{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:36px}
+.jss-circle{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;box-shadow:0 0 0 3px var(--cream)}
+.jss-line{width:2px;flex:1;min-height:20px;transition:background .4s}
+.jss-label{font-size:13.5px;line-height:1.3;padding:5px 0 20px;transition:all .25s}
 
-/* Right — detail card */
-.jss-card{border-radius:24px;border:1.5px solid var(--border);padding:36px;animation:step-pop .3s cubic-bezier(.16,1,.3,1)}
-@keyframes step-pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.jss-card-icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-.jss-card-step{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;opacity:.8}
-.jss-card-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--dark);line-height:1.2;margin-bottom:14px}
+/* Right — 3D detail card */
+.jss-card{border-radius:24px;border:1px solid var(--border);padding:36px;background:white;box-shadow:0 8px 32px rgba(9,24,16,.09),0 2px 8px rgba(9,24,16,.05);animation:step-pop .3s cubic-bezier(.16,1,.3,1);position:relative;z-index:1}
+@keyframes step-pop{from{opacity:0;transform:translateY(8px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+.jss-card-top{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.jss-card-icon{width:46px;height:46px;border-radius:13px;background:var(--gp);border:1px solid rgba(26,122,90,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(26,122,90,.15)}
+.jss-card-step{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--g);opacity:.85}
+.jss-card-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--dark);line-height:1.2;margin-bottom:12px}
 .jss-card-desc{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:28px}
-.jss-card-progress{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
-.jss-prog-bar{display:flex;gap:6px;align-items:center}
-.jss-prog-dot{width:8px;height:8px;border-radius:50%;cursor:pointer;transition:all .3s}
-.jss-prog-hint{font-size:12px;font-weight:700;opacity:.6}
-.jss-nav{display:flex;gap:8px}
-.jss-arrow{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--border);background:white;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .22s}
-.jss-arrow:hover{background:var(--gxp)}
+.jss-card-footer{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.jss-prog-bar{display:flex;gap:5px;align-items:center}
+.jss-prog-dot{height:7px;border-radius:20px;border:none;cursor:pointer;transition:all .3s;padding:0}
+.jss-nav{display:flex;gap:8px;flex-shrink:0}
+.jss-arrow{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--border);background:white;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .22s;color:var(--ink2)}
+.jss-arrow:hover{background:var(--gxp);border-color:var(--border2)}
 
 @media(max-width:900px){
-  .jss-layout{grid-template-columns:1fr;gap:36px}
-  .jss-list{flex-direction:row;flex-wrap:wrap;gap:8px}
-  .jss-item{padding:8px 14px}
-  .jss-connector{display:none}
-  .jss-item-title{font-size:12.5px}
+  .jss-layout{grid-template-columns:1fr;gap:28px}
+  .jss-list{flex-direction:row;flex-wrap:wrap;gap:6px 4px}
+  .jss-item{flex-direction:column;align-items:center;gap:4px}
+  .jss-timeline{flex-direction:row;width:auto;align-items:center}
+  .jss-line{min-height:0;width:16px;height:2px}
+  .jss-label{display:none}
+  .jss-circle{width:32px;height:32px}
 }
 @media(max-width:600px){
-  .jss-card{padding:24px}
-  .jss-card-title{font-size:20px}
-  .jss-card-desc{font-size:14px}
+  .jss-layout{gap:16px}
+  .jss-circle{width:28px;height:28px}
+  .jss-line{width:10px}
+  .jss-card{padding:20px 18px;border-radius:16px}
+  .jss-card-title{font-size:21px}
+  .jss-card-desc{font-size:14px;margin-bottom:20px}
+  .jss-card-top{margin-bottom:16px}
+  .jss-prog-dot{height:6px}
 }
 
 /* ===================== APP BANNER ===================== */
@@ -422,9 +431,7 @@
   .ecg-m-val{font-size:18px}
   .mp2{font-size:13.5px;gap:12px}
   .mp2-dot{width:30px;height:30px}
-  .journey-layout{grid-template-columns:1fr;gap:32px}
-  .journey-circle-wrap{display:flex;justify-content:center}
-  .journey-svg{width:420px;height:420px}
+  .jss-layout{grid-template-columns:1fr;gap:28px}
   .price-grid2{grid-template-columns:1fr 1fr;gap:18px;margin-top:36px}
   .pc{padding:30px 24px;border-radius:22px}
   .pc.feat{transform:none}
@@ -458,8 +465,8 @@
   .appt{padding:44px 0}
   .brands{padding:24px 0}
   .stats-strip{padding:36px 0}
-  .hero{padding-top:80px;min-height:100vh;min-height:100svh;align-items:center}
-  .hero-inner{padding:28px 16px 24px;gap:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;width:100%}
+  .hero{padding-top:70px;min-height:100svh;align-items:flex-start;justify-content:center}
+  .hero-inner{padding:20px 16px 28px;gap:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;width:100%;min-height:calc(100svh - 70px)}
   .hero-inner>div:first-child{position:relative;z-index:2;width:100%}
   .hero-tag,.hero-btns,.hero-trust,.hero-right,.hero-p{animation:none!important;opacity:1!important;transform:none!important}
   .hero-h .word{animation:none!important;opacity:1!important;transform:none!important}
@@ -524,14 +531,8 @@
   .mp2-dot{width:28px;height:28px;border-radius:8px}
   .play-circle{width:48px;height:48px}
   .play-circle svg{width:18px;height:18px}
-  .journey-svg{width:320px;height:320px}
-  .journey-step-card{padding:18px}
-  .jsc-title{font-size:17px}
-  .journey-step-nav{gap:4px}
-  .jsn-pill{width:24px;height:24px;font-size:10px}
-  .journey-controls{flex-wrap:wrap;gap:8px}
-  .jc-bar-wrap{width:100%;order:3}
-  .journey-flow-hint{font-size:10.5px}
+  .jss-card{padding:20px}
+  .jss-card-title{font-size:19px}
   .price-grid2{grid-template-columns:1fr;gap:16px;margin-top:28px}
   .pc{padding:28px 22px;border-radius:20px}
   .pc-price{font-size:38px}
