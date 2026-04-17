@@ -9,6 +9,7 @@ import DarkFeatures from './sections/DarkFeatures';
 import PlansSection from './sections/PlansSection';
 import FaqSection from './sections/FaqSection';
 import CtaBanner from './sections/CtaBanner';
+import AppBannerSection from '../Home/sections/AppBannerSection';
 
 export default function HmsPage() {
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function HmsPage() {
       <HmsHero />
       <BenefitsStrip />
       <ModulesGrid />
+      <AppBannerSection />
       <HowItWorks />
       {/* <DarkFeatures />
       <PlansSection /> */}

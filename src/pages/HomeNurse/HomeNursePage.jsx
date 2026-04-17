@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../../styles/home-nurse.css';
+import AppBannerSection from '../Home/sections/AppBannerSection';
 
 const ArrowSvg = () => <svg className="arr" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>;
 
@@ -119,31 +120,7 @@ export default function HomeNursePage() {
         </div>
       </section>
 
-      {/* Patient Stories */}
-      <section className="stories-sec">
-        <div className="container">
-          <div className="stories-header">
-            <div className="sec-label fu">Real Experiences</div>
-            <h2 className="sec-title fu d1">Patient <em>Stories</em></h2>
-          </div>
-          <div className="stories-grid">
-            {[
-              { text:"After my mother's hip surgery, the Arovita nurse was a godsend. She was incredibly caring, managed wound dressing perfectly, and even helped Mom with physiotherapy exercises.", name:'Rajesh Kumar', role:'Post-Surgery Care · New Delhi', init:'R' },
-              { text:"We hired a baby care nurse for our newborn and it was the best decision. She helped my wife with breastfeeding, managed the baby's sleep schedule, and taught us so much about infant care.", name:'Priya Sharma', role:'Baby Care · Mumbai', init:'P' },
-            ].map((s, i) => (
-              <div className={`story-card fu${i > 0 ? ` d${i}` : ''}`} key={i}>
-                <span className="story-q">"</span>
-                <p className="story-text">{s.text}</p>
-                <div className="story-stars">★★★★★</div>
-                <div className="story-auth">
-                  <div className="story-av">{s.init}</div>
-                  <div><div className="story-name">{s.name}</div><div className="story-role">{s.role}</div></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AppBannerSection />
 
       {/* FAQ */}
       <section className="hn-faq-sec">

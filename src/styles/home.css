@@ -258,8 +258,9 @@
 .app-btn-pill{display:flex;align-items:center;gap:12px;padding:12px 22px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;color:white;cursor:default;transition:all .25s;backdrop-filter:blur(8px)}
 .app-btn-pill:hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.22)}
 
-/* Phone mockup */
-.app-cta-phone{display:flex;justify-content:center;position:relative}
+/* Phone mockup / advert image */
+.app-cta-phone{display:flex;justify-content:center;align-items:center;position:relative}
+.app-advert-img{width:100%;max-width:580px;height:auto;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(0 24px 48px rgba(0,0,0,.35))}
 .acp-frame{width:240px;background:white;border-radius:38px;padding:14px;box-shadow:0 32px 80px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08);position:relative;z-index:1}
 .acp-notch{width:80px;height:22px;background:#111;border-radius:0 0 14px 14px;margin:0 auto 14px}
 .acp-screen{display:flex;flex-direction:column;gap:10px;padding:0 4px 8px}
@@ -271,6 +272,8 @@
 .acp-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .acp-tile{background:var(--gxp);border-radius:12px;padding:10px 6px;display:flex;flex-direction:column;align-items:center;border:1px solid var(--border)}
 .acp-glow{position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);width:200px;height:80px;background:radial-gradient(ellipse,rgba(46,196,138,.25),transparent 70%);pointer-events:none}
+.app-coming-soon{display:inline-flex;align-items:center;gap:14px;padding:14px 20px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(46,196,138,.25)}
+.app-cs-icon{width:40px;height:40px;border-radius:10px;background:rgba(46,196,138,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 
 @media(max-width:900px){
   .app-cta-in{grid-template-columns:1fr;gap:48px;text-align:center}
@@ -282,6 +285,7 @@
   .app-cta{padding:70px 0}
   .app-cta-h{font-size:30px}
   .acp-frame{width:200px}
+  .app-advert-img{max-width:360px}
 }
 
 /* ===================== TESTIMONIALS / WHY AROVITA ===================== */
@@ -321,7 +325,7 @@
 .pc.feat .pc-btn:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(26,122,90,.5)}
 
 /* ===================== APP CTA ===================== */
-.app-cta{padding:110px 0;background:linear-gradient(160deg,var(--dark2) 0%,#0F2A1C 100%);position:relative;overflow:hidden}
+.app-cta{padding:60px 0;background:linear-gradient(160deg,var(--dark2) 0%,#0F2A1C 100%);position:relative;overflow:hidden}
 .app-cta-orb{position:absolute;border-radius:50%;filter:blur(80px)}
 .ao1{width:500px;height:500px;background:rgba(46,196,138,.12);top:-100px;right:-100px;animation:morph-orb 14s ease-in-out infinite}
 .ao2{width:300px;height:300px;background:rgba(192,154,82,.06);bottom:0;left:200px;animation:morph-orb 10s ease-in-out 5s infinite}

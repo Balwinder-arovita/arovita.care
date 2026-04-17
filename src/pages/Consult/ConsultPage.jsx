@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/consult.css';
 import '../../styles/home-nurse.css';
+import AppBannerSection from '../Home/sections/AppBannerSection';
 
 const ArrowSvg = () => <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>;
 
@@ -157,6 +158,8 @@ export default function ConsultPage() {
           </div>
         </div>
       </section>
+
+      <AppBannerSection />
 
       {/* FAQ */}
       <section className="faq">

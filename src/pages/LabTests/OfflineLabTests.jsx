@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/lab-tests.css';
 import '../../styles/home-nurse.css';
+import AppBannerSection from '../Home/sections/AppBannerSection';
 
 const ArrowSvg = () => <svg className="arr" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>;
 
@@ -122,6 +123,8 @@ export default function OfflineLabTests() {
                     </div>
                 </div>
             </section>
+
+            <AppBannerSection />
 
             {/* Why Choose Labs - Structure Restored for CSS Connection */}
             <section className="why-labs">
