@@ -1,7 +1,7 @@
 /* ============================================================
    NAVBAR
    ============================================================ */
-.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:14px 24px;transition:all .35s;overflow:visible}
+.navbar{position:fixed;top:0;left:0;width:100vw;z-index:1000;padding:14px 24px;transition:all .35s;overflow:visible;box-sizing:border-box}
 .nav-pill{display:flex;align-items:center;justify-content:space-between;height:60px;padding:0 10px 0 16px;max-width:1160px;margin:0 auto;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:100px;box-shadow:0 2px 24px rgba(9,24,16,.08),0 0 0 1px rgba(26,122,90,.08);transition:all .35s;overflow:visible}
 .navbar.sc .nav-pill{box-shadow:0 4px 32px rgba(9,24,16,.12),0 0 0 1.5px rgba(26,122,90,.14)}
 .nav-logo{display:flex;align-items:center;gap:10px;padding:0 8px}
