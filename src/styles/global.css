@@ -11,7 +11,7 @@
   --sh:0 4px 28px rgba(9,24,16,0.08);--sh-lg:0 18px 56px rgba(9,24,16,0.13);
   --r:12px;--rl:20px;--rx:26px;
 }
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;cursor:none}
 a{text-decoration:none;color:inherit}
 a,button{cursor:none}
