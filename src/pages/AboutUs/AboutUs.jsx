@@ -7,8 +7,26 @@ const ArrowSvg = () => <svg viewBox="0 0 24 24" width="16" height="16" fill="non
 export default function AboutUs() {
   return (
     <>
+      {/* Hero */}
+      <section className="consult-hero">
+        <div className="hero-mesh">
+          <div className="mesh-orb mo1"></div>
+          <div className="mesh-orb mo2"></div>
+          <div className="mesh-orb mo3"></div>
+        </div>
+        <div className="container">
+          <div className="hero-content fu">
+            <div className="sec-label">Our Story</div>
+            <h1>Transforming Healthcare for <em>Every Indian</em></h1>
+            <p className="hero-sub" style={{ maxWidth: '680px', margin: '20px auto' }}>
+              Arovita was born from a simple belief — that quality healthcare should never be a privilege.
+              We combine world-class expertise with the warmth of a family doctor, available every single day.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    {/* Our Story — visual + text from homepage AboutSection */}
+      {/* Our Story — visual + text from homepage AboutSection */}
       <section className="about" id="about">
         <div className="container">
           <div className="about-in">
@@ -82,27 +100,7 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-      </section>  
-
-      {/* Hero */}
-      <section className="consult-hero">
-        <div className="hero-mesh">
-          <div className="mesh-orb mo1"></div>
-          <div className="mesh-orb mo2"></div>
-          <div className="mesh-orb mo3"></div>
-        </div>
-        <div className="container">
-          <div className="hero-content fu">
-            <div className="sec-label">Our Story</div>
-            <h1>Transforming Healthcare for <em>Every Indian</em></h1>
-            <p className="hero-sub" style={{ maxWidth: '680px', margin: '20px auto' }}>
-              Arovita was born from a simple belief — that quality healthcare should never be a privilege.
-              We combine world-class expertise with the warmth of a family doctor, available every single day.
-            </p>
-          </div>
-        </div>
       </section>
-
 
       {/* Problem vs Solution */}
       <section className="hn-how-sec">
