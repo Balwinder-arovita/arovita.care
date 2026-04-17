@@ -30,7 +30,7 @@ export default function Navbar() {
             <div className="logo-svg-wrap">
               <img src={logoPoppins} alt="Arovita" />
             </div>
-            <span className="nav-brand">Aro<span>vita</span></span>
+            <span className="nav-brand">arovita.care</span>
           </Link>
 
           <div className="nav-links">

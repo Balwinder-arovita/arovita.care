@@ -62,7 +62,7 @@ export default function WhyArovitaSection() {
             <div style={{position:'absolute', top:'-40px', right:'-40px', width:'160px', height:'160px', background:'radial-gradient(circle,rgba(46,196,138,.25),transparent 70%)', pointerEvents:'none'}}></div>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'24px'}}>
               <div style={{width:'9px', height:'9px', background:'var(--gl)', borderRadius:'50%', boxShadow:'0 0 0 4px rgba(46,196,138,.22)', animation:'live-pulse 1.8s ease-in-out infinite'}}></div>
-              <span style={{fontSize:'11px', fontWeight:700, color:'var(--g)', letterSpacing:'1.2px', textTransform:'uppercase'}}>With Arovita — Connected Healthcare</span>
+              <span style={{fontSize:'11px', fontWeight:700, color:'var(--g)', letterSpacing:'1.2px', textTransform:'uppercase'}}>With arovita.care — Connected Healthcare</span>
             </div>
             <div style={{display:'flex', flexDirection:'column', gap:0}}>
               {solutions.map((s, i) => (
@@ -103,7 +103,7 @@ export default function WhyArovitaSection() {
           <div style={{ flex: '1', minWidth: '260px' }}>
             <div style={{fontSize:'11px', fontWeight:700, color:'var(--gl)', letterSpacing:'1px', textTransform:'uppercase', marginBottom:'8px'}}>From fragmented visits to continuous care.</div>
             <div style={{fontSize:'16px', color:'rgba(255,255,255,.82)', fontWeight:400, lineHeight:'1.6'}}>
-              Arovita transforms isolated healthcare interactions into a continuous, connected care journey — where consultations lead to tests, tests lead to treatment, and treatment leads to ongoing monitoring.
+              arovita.care transforms isolated healthcare interactions into a continuous, connected care journey — where consultations lead to tests, tests lead to treatment, and treatment leads to ongoing monitoring.
             </div>
           </div>
         </div>

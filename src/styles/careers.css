@@ -1,7 +1,7 @@
 /* ===================== CAREERS PAGE ===================== */
 
 /* ===================== Hero ===================== */
-.career-hero{min-height:420px;position:relative;overflow:hidden;display:flex;align-items:center;padding-top:76px;background:var(--cream)}
+.career-hero{height:100vh;min-height:560px;position:relative;overflow:hidden;display:flex;align-items:center;padding-top:76px;background:var(--cream)}
 .career-hero-mesh{position:absolute;inset:0;z-index:0}
 .career-hero-mesh .mesh-orb:nth-child(1){width:600px;height:600px;background:radial-gradient(circle,rgba(46,196,138,.12),transparent 70%);top:-150px;left:-150px}
 .career-hero-mesh .mesh-orb:nth-child(2){width:450px;height:450px;background:radial-gradient(circle,rgba(192,154,82,.08),transparent 70%);bottom:-80px;right:-100px}
@@ -35,19 +35,19 @@
 .value-desc{font-size:13.5px;color:var(--muted);line-height:1.65}
 
 /* ===================== Perks Section ===================== */
-.career-perks{padding:100px 0;background:var(--dark2);position:relative;overflow:hidden}
-.career-perks::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(255,255,255,0.03)'/%3E%3C/svg%3E");background-size:60px 60px}
+.career-perks{padding:100px 0;background:linear-gradient(135deg,#0f2b1f 0%,#1a3d2b 40%,#0d2318 100%);position:relative;overflow:hidden}
+.career-perks::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 50%,rgba(46,196,138,.08),transparent),radial-gradient(ellipse 60% 80% at 80% 20%,rgba(192,154,82,.06),transparent)}
 .perks-header{text-align:center;position:relative;z-index:1;margin-bottom:56px}
 .perks-header .sec-label{color:var(--gl)}
 .perks-header .sec-label::before,.perks-header .sec-label::after{background:var(--gl)}
 .perks-header .sec-title{color:white}
 .perks-header .sec-title em::after{background:linear-gradient(90deg,var(--gl),var(--gold2))}
 .perks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative;z-index:1}
-.perk-card{padding:28px 22px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(8px);transition:all .3s;text-align:center}
-.perk-card:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);transform:translateY(-6px)}
+.perk-card{padding:28px 22px;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px);transition:all .3s;text-align:center}
+.perk-card:hover{background:rgba(255,255,255,.1);border-color:rgba(46,196,138,.35);transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,.25)}
 .perk-emoji{font-size:36px;margin-bottom:14px;display:block}
 .perk-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:white;margin-bottom:6px}
-.perk-desc{font-size:12.5px;color:rgba(255,255,255,.42);line-height:1.65}
+.perk-desc{font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.65}
 
 /* ===================== Join Section ===================== */
 .career-join{padding:100px 0;background:linear-gradient(180deg,var(--gxp) 0%,#fff 30%,#fff 70%,var(--cream) 100%)}

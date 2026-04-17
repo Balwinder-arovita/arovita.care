@@ -63,7 +63,7 @@ export default function AboutSection() {
                 <li key={i}><div className="check-ic"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#1A7A5A" strokeWidth="2.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>{t}</li>
               ))}
             </ul>
-            <Link to="/services" className="btn-green">Learn Our Story <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></Link>
+            <Link to="/about-us" className="btn-green">Learn Our Story <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></Link>
           </div>
         </div>
       </div>

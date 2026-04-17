@@ -141,12 +141,12 @@ export default function PrivacyPolicyPage() {
               <tbody>
                 <tr>
                   <td><strong>Name</strong></td>
-                  <td>[TO BE DESIGNATED — Insert Full Name]</td>
+                  <td>Grievance Officer</td>
                 </tr>
-                <tr>
+                {/* <tr>
                   <td><strong>Designation</strong></td>
                   <td>[TO BE DESIGNATED — e.g., Data Protection Officer / Chief Compliance Officer]</td>
-                </tr>
+                </tr> */}
                 <tr>
                   <td><strong>Email</strong></td>
                   <td><a href="mailto:grievance@arovita.care">grievance@arovita.care</a></td>
@@ -157,7 +157,8 @@ export default function PrivacyPolicyPage() {
                 </tr>
                 <tr>
                   <td><strong>Registered Address</strong></td>
-                  <td>Arovita Healthcare Private Limited, [Registered Office Address], India.</td>
+                  <td>Arovita Healthcare Private Limited, Second Floor, NO.07/3, 15/1, 185/2, 185/A, Kokarya, Business Synergy Center , Nagananda Commercial Complex, 18th Main Road, AKR Global Solutions,
+Jayanagar, Bengaluru, Bengaluru Urban, Karnataka, 560041</td>
                 </tr>
               </tbody>
             </table>

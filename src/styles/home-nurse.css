@@ -36,8 +36,8 @@
 .hn-how-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;max-width:1000px;margin:0 auto;position:relative}
 .hn-how-steps::before{content:'';position:absolute;top:36px;left:calc(12.5% + 20px);right:calc(12.5% + 20px);height:2px;background:var(--border);z-index:0}
 .hn-how-step{text-align:center;position:relative;z-index:1}
-.hn-step-num{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--g),var(--gl));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Playfair Display',serif;font-size:26px;font-weight:800;color:white;position:relative;box-shadow:0 8px 28px rgba(26,122,90,.3)}
-.hn-step-num::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px dashed rgba(26,122,90,.2);animation:hn-spin 12s linear infinite}
+.hn-step-num{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#2B482A,#4a7a48);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Playfair Display',serif;font-size:26px;font-weight:800;color:white;position:relative;box-shadow:0 8px 28px rgba(43,72,42,.35)}
+.hn-step-num::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px dashed rgba(43,72,42,.25);animation:hn-spin 12s linear infinite}
 @keyframes hn-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 .hn-step-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--dark);margin-bottom:6px}
 .hn-step-desc{font-size:13px;color:var(--muted);line-height:1.6}

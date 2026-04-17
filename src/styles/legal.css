@@ -28,7 +28,7 @@
 .legal-card ol li::marker{color:var(--g);font-weight:700}
 .legal-card a{color:var(--g);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(26,122,90,.2);transition:all .2s}
 .legal-card a:hover{border-color:var(--g)}
-.legal-red{color:#e53935}
+.legal-red{color:var(--muted)}
 
 /* ===================== Table ===================== */
 .legal-table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:14px}

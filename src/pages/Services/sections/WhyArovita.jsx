@@ -14,7 +14,7 @@ export default function WhyArovita() {
       <div className="container">
         <div className="why-header">
           <div className="sec-label fu">Why Choose Us</div>
-          <h2 className="sec-title fu d1">Why <em>Arovita</em></h2>
+          <h2 className="sec-title fu d1">Why <em>arovita.care</em></h2>
         </div>
         <div className="why-grid">
           {whyCards.map((c, i) => (

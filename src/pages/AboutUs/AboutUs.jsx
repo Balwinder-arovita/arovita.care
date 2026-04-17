@@ -7,21 +7,90 @@ const ArrowSvg = () => <svg viewBox="0 0 24 24" width="16" height="16" fill="non
 export default function AboutUs() {
   return (
     <>
-      {/* Hero */}
-      <section className="consult-hero">
-        <div className="hero-mesh">
-          <div className="mesh-orb mo1"></div>
-          <div className="mesh-orb mo2"></div>
-          <div className="mesh-orb mo3"></div>
-        </div>
+      {/* Hero — Our Story */}
+      <section className="about-hero">
+        {/* Background layers */}
+        <div className="about-hero-grid" />
+        <div className="about-hero-orb aho1" />
+        <div className="about-hero-orb aho2" />
+        <div className="about-hero-orb aho3" />
+
         <div className="container">
-          <div className="hero-content fu">
-            <div className="sec-label">Our Story</div>
-            <h1>Transforming Healthcare for <em>Every Indian</em></h1>
-            <p className="hero-sub" style={{ maxWidth: '680px', margin: '20px auto' }}>
-              Arovita was born from a simple belief — that quality healthcare should never be a privilege.
-              We combine world-class expertise with the warmth of a family doctor, available every single day.
-            </p>
+          <div className="about-hero-inner">
+
+            {/* Left — story */}
+            <div className="about-hero-text fu">
+              <div className="sec-label">Our Story</div>
+              <h1 className="about-hero-h">
+                Healthcare for <em>every Indian,</em><br/>not just the privileged.
+              </h1>
+              <p className="about-hero-p">
+                arovita.care was born from a moment of frustration — watching a family member carry paper prescriptions between three different hospitals, re-explain their history to every new doctor, and miss a critical follow-up because no one reminded them.
+              </p>
+              <p className="about-hero-p">
+                We built arovita.care so that never happens again. One platform that connects every consultation, test, prescription, and follow-up into a single, continuous care journey — available to anyone, anywhere in India.
+              </p>
+
+              {/* Pillars */}
+              <div className="about-hero-pillars">
+                {[
+                  { icon: <><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></>, label: 'Secure & Private', note: 'End-to-end encrypted records' },
+                  { icon: <><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></>, label: 'Built for India', note: 'Designed around Indian healthcare' },
+                  { icon: <><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></>, label: 'Continuous Care', note: 'Not just one-time visits' },
+                ].map((p, i) => (
+                  <div className="about-pillar" key={i}>
+                    <div className="about-pillar-ic">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--g)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{p.icon}</svg>
+                    </div>
+                    <div className="about-pillar-label">{p.label} <span className="about-pillar-note">— {p.note}</span></div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="about-hero-actions">
+                <Link to="/services" className="btn-green">Explore Services <ArrowSvg /></Link>
+                <Link to="/contact" className="about-hero-link">Talk to us <ArrowSvg /></Link>
+              </div>
+            </div>
+
+            {/* Right — visual stats card */}
+            <div className="about-hero-card fu d2">
+              <div className="ahc-top">
+                <div className="ahc-orb" />
+                <svg viewBox="0 0 64 64" fill="none" width="56" height="56">
+                  <path d="M32 56S8 40 8 24c0-10 8-16 16-16 4 0 8 2 8 8 0-6 4-8 8-8 8 0 16 6 16 16C56 40 32 56 32 56Z" stroke="white" strokeWidth="2.5" fill="none"/>
+                  <path d="M27 32h10M32 27v10" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+                <div className="ahc-headline">arovita.care</div>
+                <div className="ahc-sub">Connected Healthcare Platform</div>
+              </div>
+
+              <div className="ahc-stats">
+                {[
+                  { num: '6+', label: 'Healthcare Services' },
+                  { num: '360°', label: 'Patient Health View' },
+                  { num: '1', label: 'Unified Platform' },
+                  { num: '24/7', label: 'Care Availability' },
+                ].map((s, i) => (
+                  <div className="ahc-stat" key={i}>
+                    <div className="ahc-stat-num">{s.num}</div>
+                    <div className="ahc-stat-label">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="ahc-services">
+                {['Video Consult', 'Hospital Visit', 'Lab Tests', 'Home Nursing', 'HMS'].map((s, i) => (
+                  <span className="ahc-tag" key={i}>{s}</span>
+                ))}
+              </div>
+
+              <div className="ahc-footer">
+                <div className="ahc-live-dot" />
+                <span>Serving Bengaluru — expanding across India</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

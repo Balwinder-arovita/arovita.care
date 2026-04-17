@@ -10,6 +10,7 @@ import MissionSection from './sections/MissionSection';
 import FeaturesSection from './sections/FeaturesSection';
 import WhyArovitaSection from './sections/WhyArovitaSection';
 import EcosystemSection from './sections/EcosystemSection';
+import AppBannerSection from './sections/AppBannerSection';
 import CtaSection from './sections/CtaSection';
 import AppointmentSection from './sections/AppointmentSection';
 
@@ -36,6 +37,7 @@ export default function HomePage() {
       <WhyArovitaSection />
       <AboutSection />
       <EcosystemSection />
+      {/* <AppBannerSection /> */}
       <CtaSection />
       <AppointmentSection />
     </>
