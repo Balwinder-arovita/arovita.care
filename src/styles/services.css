@@ -13,7 +13,7 @@
 @keyframes ecg-flow{0%{stroke-dashoffset:600}100%{stroke-dashoffset:-600}}
 
 /* ── Services Showcase ── */
-.svc-showcase{padding:80px 0 100px;background:linear-gradient(180deg,#fff 0%,#FAFDF9 40%,var(--gxp) 100%);position:relative}
+.svc-showcase{padding:80px 0 100px;background:linear-gradient(180deg,#fff 0%,#FAFDF9 40%,var(--gxp) 100%);position:relative;overflow:hidden}
 .svc-showcase::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(242,251,247,.4) 100%);pointer-events:none}
 .svc-sc-header{text-align:center;margin-bottom:40px}
 
@@ -89,8 +89,9 @@
   .svc-panel-highlights{max-width:340px;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:10px}
 }
 @media(max-width:600px){
-  .svc-tabs{gap:6px}
-  .svc-tab{font-size:12px;padding:7px 12px;gap:5px}
+  .svc-tabs{gap:6px;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .svc-tabs::-webkit-scrollbar{display:none}
+  .svc-tab{font-size:12px;padding:7px 12px;gap:5px;flex-shrink:0}
   .svc-tab-badge{display:none}
   .svc-panel{border-radius:20px}
   .svc-panel-visual{padding:32px 22px;min-height:220px}
